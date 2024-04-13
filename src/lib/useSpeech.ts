@@ -12,7 +12,7 @@ import { PlayingState, createSpeechEngine } from "./speech";
 */
 const useSpeech = (sentences: Array<string>) => {
   const [currentSentenceIdx, setCurrentSentenceIdx] = useState(0);
-  const [currentWordRange, setCurrentWordRange] = useState([0, 0]);
+  const [currentWordRange, setCurrentWordRange] = useState<[number, number]>([0, 0]);
   const [nextSentenceIndx, setNextSentenceIndx] = useState(0);
 
   const [playbackState, setPlaybackState] = useState<PlayingState>("paused");
